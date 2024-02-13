@@ -32,12 +32,7 @@ export default function HeroSection() {
   }, [heroImages.length]);
 
   return (
-    <div
-      className="relative w-full overflow-hidden h-1/3 max-h-1/3 lg:max-h-1/2"
-      //   style={{
-      //     maxHeight: "33vh", // max height for mobile devices
-      //   }}
-    >
+    <div className="relative w-full overflow-hidden h-1/3 max-h-1/3 lg:max-h-1/2">
       <div
         className="flex h-full transition-transform duration-500 ease-in-out"
         style={{
@@ -46,17 +41,19 @@ export default function HeroSection() {
         }}
       >
         {heroImages.map((image: any, index) => (
-          <img
-            key={index}
-            src={image.mobileImageUrl}
-            alt={image.title}
-            // width={100%}
-            // height={100%}
-            className="w-full h-full object-cover object-center block"
-            style={{
-              maxHeight: "33vh",
-            }}
-          />
+          <div key={index} className="w-full lg:w-5/6 flex-shrink-0 h-full">
+            <img
+              key={index}
+              src={image.mobileImageUrl}
+              alt={image.title}
+              // width={100}
+              // height={100}
+              className="w-full h-full object-cover object-center block"
+              style={{
+                maxHeight: "33vh",
+              }}
+            />
+          </div>
         ))}
       </div>
 
