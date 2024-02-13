@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { MenuIcon, SearchIcon } from "@heroicons/react/outline"; // import icons needed
+import { MenuIcon, SearchIcon, BellIcon } from "@heroicons/react/outline"; // import icons needed
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,18 +62,21 @@ export default function Navbar() {
             <a href="#" className="text-gray-700 hover:text-gray-900">
               Login
             </a>
-            <div>
-              /
-            </div>
+            <div>/</div>
             <a href="#" className="text-gray-700 hover:text-gray-900">
-             Sign up
+              Sign up
             </a>
             {/* New icon element here */}
           </div>
 
           {/* Icons - visible on screens smaller than 850px */}
           <div className="flex items-center lg:hidden">
-            {/* Mobile icons go here */}
+            <p className="mx-2">
+              <BellIcon className="h-5 w-5 text-gray-500" />
+            </p>
+            <p className="mx-1">
+              <SearchIcon className="h-5 w-5 text-gray-500" />
+            </p>
           </div>
         </div>
       </div>

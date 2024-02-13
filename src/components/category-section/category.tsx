@@ -12,7 +12,6 @@ export default function CategorySection() {
           "https://api.testvalley.kr/main-shortcut/all"
         );
         const data = await response.json();
-        console.log(data);
         setIconImages(data);
       } catch (error) {
         console.error("Error fetching hero images:", error);
